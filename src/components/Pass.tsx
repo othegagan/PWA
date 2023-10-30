@@ -38,7 +38,7 @@ const Pass = () => {
                         <div className="h-[70px] w-[70px] rounded-full bg-[url('assets/bmtc-logo.jpg')] bg-cover "></div>
 
                         <div className="flex flex-col gap-[5px]">
-                            <p className="text-xs font-medium">
+                            <p className="text-sm font-medium">
                                 Ordinary Service Monthly Pass
                             </p>
 
@@ -55,7 +55,7 @@ const Pass = () => {
                                 </div>
                             </div>
 
-                            <p className="text-xs font-medium">
+                            <p className="text-sm font-medium">
                                 Pass ID:{" "}
                                 <span className="font-medium">
                                     TPASS2397123
@@ -84,7 +84,7 @@ const Pass = () => {
                 </div>
             </div>
 
-            <div className="pt-12 pb-10 px-5 overflow-y-auto h-full bg-[#ECECEC] no-scrollbar">
+            <div className="pt-[50px] pb-10 px-5 overflow-y-auto h-full bg-[#ECECEC] no-scrollbar">
                 <h2 className="font-bold text-lg ml-2 text-[#0D2733] mt-[12rem]">
                     Booking Details
                 </h2>
