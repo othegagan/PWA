@@ -3,7 +3,7 @@ const Terms = () => {
         <div className="w-full bg-white py-2 px-6 border-t border-zinc-200  fixed bottom-0">
             <div className="flex justify-between items-center">
                 <div className="flex flex-col">
-                    <h2 className="text-sm font-bold leading-none text-[#727272]">
+                    <h2 className="text-sm font-bold leading-normal text-[#727272]">
                         Terms of Use
                     </h2>
                     <p className="text-xs leading-none font-medium text-[#727272]">

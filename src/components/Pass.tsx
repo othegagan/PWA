@@ -5,7 +5,7 @@ const Pass = () => {
     return (
         <div className="flex flex-col h-screen">
             <div className="w-full  h-[128px] bg-[url('assets/pass-top-design.png')] border-b border-zinc-200  fixed top-0">
-                <div className="px-5 pt-6 pb-5 flex flex-row justify-between items-center">
+                <div className="px-5 pt-4 pb-5 flex flex-row justify-between items-center">
                     <div className="flex flex-row items-center gap-6">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -35,27 +35,27 @@ const Pass = () => {
                         boxShadow: " 0px 0px 4px 0px rgba(0, 0, 0, 0.15)",
                     }}>
                     <div className="flex gap-[18px]">
-                        <div className="h-[70px] w-[70px] rounded-full bg-[#D9D9D9]"></div>
+                        <div className="h-[70px] w-[70px] rounded-full bg-[url('assets/bmtc-logo.jpg')] bg-cover "></div>
 
-                        <div className="flex flex-col gap-[6px]">
-                            <p className="text-base font-medium">
+                        <div className="flex flex-col gap-[5px]">
+                            <p className="text-xs font-medium">
                                 Ordinary Service Monthly Pass
                             </p>
 
                             <div className="flex flex-row gap-2">
                                 <div className="bg-[#FDE685] rounded-[10px] px-2 py-1 ">
-                                    <p className="text-[#9A7D00] font-bold text-sm">
+                                    <p className="text-[#9A7D00] font-bold text-xs">
                                         monthly
                                     </p>
                                 </div>
                                 <div className="bg-[#DCECC8] rounded-[10px] px-2 py-1 ">
-                                    <p className="text-[#5B8215] font-bold text-sm">
+                                    <p className="text-[#5B8215] font-bold text-xs">
                                         Ordinary
                                     </p>
                                 </div>
                             </div>
 
-                            <p className="text-base font-medium">
+                            <p className="text-xs font-medium">
                                 Pass ID:{" "}
                                 <span className="font-medium">
                                     TPASS2397123
@@ -64,12 +64,12 @@ const Pass = () => {
                         </div>
                     </div>
 
-                    <p className="underline text-center underline-offset-2 mt-1 mb-3 text-base text-[#157B83] font-bold">
+                    <p className="underline text-center underline-offset-2 mt-1 mb-3 text-sm text-[#157B83] font-semibold">
                         Click here to view validation instructions
                     </p>
 
                     <div className="flex h-[36px] items-center ">
-                        <div className=" bg-[#157B83]  p-[6px] rounded-[6px]">
+                        <div className=" bg-[#157B83]  p-[7px] rounded-[6px]">
                             <img
                                 src={smallQRCode}
                                 alt="Small QR Code"
@@ -84,7 +84,7 @@ const Pass = () => {
                 </div>
             </div>
 
-            <div className="pt-24 pb-14 px-5 overflow-y-auto h-full bg-[#ECECEC] no-scrollbar">
+            <div className="pt-12 pb-10 px-5 overflow-y-auto h-full bg-[#ECECEC] no-scrollbar">
                 <h2 className="font-bold text-lg ml-2 text-[#0D2733] mt-[12rem]">
                     Booking Details
                 </h2>
@@ -188,7 +188,7 @@ const Pass = () => {
                         <div className="border border-[#BBBFBE] w-full"></div>
                     </div>
 
-                    <div className="mx-auto w-[160px] h-[160px] bg-zinc-200 mb-2"></div>
+                    <div className="mx-auto w-[160px] h-[160px] bg-[url('assets/qrcode.gif')] bg-cover "></div>
                 </div>
             </div>
 
