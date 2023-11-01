@@ -1,9 +1,12 @@
 import { useState } from "react";
 //@ts-ignore
+import { DateTime } from "luxon";
+//@ts-ignore
 import { QrScanner } from "react-qrcode-scanner";
 
-const CustomQRScanner = () => {
-    const [data, setData] = useState("");
+
+const CustomQRScanner = ({ setBusNumber, setshowQRScanner, setLastValidated }: any) => {
+    const [hideQRScanner, setHideQRScanner] = useState("");
 
     function extractBusNumber(inputString: any) {
         const regex = /tummoc_qr=([A-Z0-9\s]+)&/i;
@@ -16,30 +19,56 @@ const CustomQRScanner = () => {
         }
     }
 
-    const handleScan = (value: any) => {
-        // console.log({ value })
+    function getCurrentTimeFormatted() {
+        const now = DateTime.now();
+        return now.toFormat("dd LLL yyyy, hh:mm a");
+    }
 
-        setData(extractBusNumber(value));
+
+    const handleScan = (value: any) => {
+        const busNumber = extractBusNumber(value);
+        const time = getCurrentTimeFormatted();
+
+        // Store busNumber and time in local storage
+        localStorage.setItem('busNumber', busNumber);
+        localStorage.setItem('time', time);
+
+        setHideQRScanner(busNumber);
+        setBusNumber(busNumber);
+        setshowQRScanner(false);
+        setLastValidated(time);
     };
 
     const handleError = (error: any) => {
         console.log({ error });
     };
 
+    const style = {
+        width: "100vw",
+        height: "100vh",
+        backgroundColor: "#333333",
+        overflow: "hidden",
+    };
+
     return (
         <div>
-            {data === "" && (
+            {hideQRScanner === "" && (
                 <div className="h-[2px] animate-pulse bg-red-700 w-[300px] mx-auto z-40 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
             )}
 
-            {data !== "" && <p>{data}</p>}
+            {/* {hideQRScanner !== "" && <p>{hideQRScanner}</p>} */}
 
-            {data === "" && (
+            {hideQRScanner === "" && (
                 <QrScanner
                     onScan={handleScan}
                     onError={handleError}
                     facingMode="environment" // Use the back camera
                     flipHorizontally={true} // Do not flip the video output
+
+                    delay={800} //delay between each scan
+                    // style={style}
+                    containerStyle={style}
+
                     // onLoad={val :{mirrorVideo, streamLabel}}
 
                     //  onError = (error) => console.log({error}),
@@ -58,7 +87,6 @@ const CustomQRScanner = () => {
 
                     //  className, //classnames will be added to the section wrapper
 
-                    //  delay = 800, //delay between each scan
 
                     //  resolution = 600, //canvas resolution
                     //any valid JS-CSS can be added here

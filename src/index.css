@@ -3,28 +3,33 @@
 @tailwind utilities;
 
 
+
 @layer components {
+    .label {
+        @apply text-gray font-normal text-sm tracking-[0.12px]
+    }
+
+    .value {
+        @apply font-medium text-base text-mid-green leading-[14px] tracking-[0.14px];
+    }
+
     body {
         @apply font-mazz;
     }
 
-    @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
 
-        /* Hide scrollbar for Chrome, Safari and Opera */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-
-        /* Hide scrollbar for IE, Edge and Firefox */
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            /* IE and Edge */
-            scrollbar-width: none;
-            /* Firefox */
-        }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
     }
 }
-
 
 
 @font-face {
@@ -69,15 +74,4 @@
     src: url('assets/MazzardM-Black.ttf');
     font-weight: 800;
     font-style: normal;
-}
-
-
-@layer components{
-    .label{
-        @apply text-gray font-medium text-sm  tracking-[0.12px]
-    }
-
-    .value{
-        @apply font-semibold text-base text-mid-green tracking-[0.14px];
-    }
 }

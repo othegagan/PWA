@@ -6,7 +6,7 @@ const Terms = () => {
                     <h2 className="text-sm font-bold leading-normal text-[#727272]">
                         Terms of Use
                     </h2>
-                    <p className="text-xs leading-none font-medium text-[#727272]">
+                    <p className="text-[12px] leading-none tracking-normal font-semibold text-[#727272]">
                         Click to read the terms and conditions for this pass.
                     </p>
                 </div>
@@ -16,7 +16,7 @@ const Terms = () => {
                     width="16"
                     height="16"
                     viewBox="0 0 16 16"
-                    className="scale-1.3"
+                    className="scale-110"
                     fill="none">
                     <g clip-path="url(#clip0_45_2)">
                         <path

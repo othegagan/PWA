@@ -23,7 +23,7 @@ const manifestForPlugIn: any = {
       }
     ],
     background_color: '#ffffff',
-    theme_color: '#000000',
+    theme_color: '#25414C',
     display: "standalone",
     scope: '/',
     start_url: "/",
