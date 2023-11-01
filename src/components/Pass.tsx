@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import smallQRCode from "../assets/small-qrcode.png";
 import CustomQRScanner from "./CustomQRScanner";
 import Terms from "./Terms";
@@ -28,17 +29,19 @@ const Pass = () => {
                     <div className="w-full  h-[160px] bg-cover bg-[url('assets/pass-top-design.png')] border-b border-zinc-200  fixed top-0">
                         <div className="px-5 pt-4 pb-5 flex flex-row justify-between items-center">
                             <div className="flex flex-row items-center gap-6">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    width="14"
-                                    height="14"
-                                    viewBox="0 0 14 14"
-                                    fill="none">
-                                    <path
-                                        d="M14 6.125H3.35125L8.2425 1.23375L7 0L0 7L7 14L8.23375 12.7663L3.35125 7.875H14V6.125Z"
-                                        fill="white"
-                                    />
-                                </svg>
+                                <Link to="/bookings">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="14"
+                                        height="14"
+                                        viewBox="0 0 14 14"
+                                        fill="none">
+                                        <path
+                                            d="M14 6.125H3.35125L8.2425 1.23375L7 0L0 7L7 14L8.23375 12.7663L3.35125 7.875H14V6.125Z"
+                                            fill="white"
+                                        />
+                                    </svg>
+                                </Link>
 
                                 <p className="text-white text-lg font-medium">
                                     Your Bus Pass
@@ -49,64 +52,66 @@ const Pass = () => {
                                 Support
                             </p>
                         </div>
+                        <div className="bg-[#ECECEC] max-w-2xl  mx-5 rounded-t-[10px] mb-6 rounded-b-none" style={{
+                            boxShadow: " 0px 0px 4px 0px rgba(0, 0, 0, 0.15)",
+                        }}>
+                            <div
+                                className="max-w-2xl  bg-white px-3 py-4  rounded-[10px] "
+                            >
+                                <div className="flex gap-[18px]">
+                                    <div className="h-[70px] w-[70px] rounded-full bg-[url('assets/bmtc-logo.jpg')] bg-cover "></div>
 
-                        <div
-                            className="max-w-2xl  mx-5 bg-white px-3 py-4  rounded-[10px] mb-6"
-                            style={{
-                                boxShadow: " 0px 0px 4px 0px rgba(0, 0, 0, 0.15)",
-                            }}>
-                            <div className="flex gap-[18px]">
-                                <div className="h-[70px] w-[70px] rounded-full bg-[url('assets/bmtc-logo.jpg')] bg-cover "></div>
+                                    <div className="flex flex-col gap-[5px]">
+                                        <p className="text-[16px] font-normal  text-black">
+                                            Ordinary Service Monthly Pass
+                                        </p>
 
-                                <div className="flex flex-col gap-[5px]">
-                                    <p className="text-[16px] font-normal  text-black">
-                                        Ordinary Service Monthly Pass
-                                    </p>
-
-                                    <div className="flex flex-row gap-2">
-                                        <div className="bg-[#FDE685] rounded-[10px] px-2 py-1 ">
-                                            <p className="text-[#9A7D00] font-bold text-xs">
-                                                monthly
-                                            </p>
+                                        <div className="flex flex-row gap-2">
+                                            <div className="bg-[#FDE685] rounded-[10px] px-2 py-1 ">
+                                                <p className="text-[#9A7D00] font-bold text-xs">
+                                                    monthly
+                                                </p>
+                                            </div>
+                                            <div className="bg-[#DCECC8] rounded-[10px] px-2 py-1 ">
+                                                <p className="text-[#5B8215] font-bold text-xs">
+                                                    Ordinary
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div className="bg-[#DCECC8] rounded-[10px] px-2 py-1 ">
-                                            <p className="text-[#5B8215] font-bold text-xs">
-                                                Ordinary
-                                            </p>
-                                        </div>
+
+                                        <p className="text-[14px] font-normal text-black">
+                                            <span className="text-gray">Pass ID:</span>{" "}
+                                            <span >
+                                                TPASS2397123
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <p className="underline text-center underline-offset-2 mt-2 mb-4 text-[16px] text-[#157B83] font-semibold tracking-normal">
+                                    Click here to view validation instructions
+                                </p>
+
+                                <div className="flex h-[34px] items-center " onClick={() => {
+                                    setTimeout(() => {
+                                        setshowQRScanner(true);
+                                    }, 400);
+                                }}>
+                                    <div className=" bg-[#157B83]  p-[7px] rounded-[6px]">
+                                        <img
+                                            src={smallQRCode}
+                                            alt="Small QR Code"
+                                            className="w-8 h-7"
+                                        />
                                     </div>
 
-                                    <p className="text-[14px] font-normal text-black">
-                                        <span className="text-gray">Pass ID:</span>{" "}
-                                        <span className="font-light">
-                                            TPASS2397123
-                                        </span>
+                                    <p className="bg-[#E8F7F0] text-sm font-medium w-full text-[#545c58]  rounded-r-[6px]  py-3 pl-3">
+                                        Scan conductor QR for validation{" "}
                                     </p>
                                 </div>
                             </div>
-
-                            <p className="underline text-center underline-offset-2 mt-2 mb-4 text-[16px] text-[#157B83] font-semibold tracking-normal">
-                                Click here to view validation instructions
-                            </p>
-
-                            <div className="flex h-[34px] items-center " onClick={() => {
-                                setTimeout(() => {
-                                    setshowQRScanner(true);
-                                }, 400);
-                            }}>
-                                <div className=" bg-[#157B83]  p-[7px] rounded-[6px]">
-                                    <img
-                                        src={smallQRCode}
-                                        alt="Small QR Code"
-                                        className="w-8 h-7"
-                                    />
-                                </div>
-
-                                <p className="bg-[#E8F7F0] text-sm font-medium w-full text-[#545c58]  rounded-r-[6px]  py-3 pl-3">
-                                    Scan conductor QR for validation{" "}
-                                </p>
-                            </div>
                         </div>
+
                     </div>
 
                     <div className="pt-[50px] pb-10 px-5 overflow-y-auto h-full bg-[#ECECEC] no-scrollbar">
