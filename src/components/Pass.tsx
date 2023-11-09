@@ -166,7 +166,7 @@ const Pass = () => {
                                 </div>
                             </div>
 
-                            <div className=" flex justify-center items-center my-4">
+                            <div className=" flex justify-center items-center my-5">
                                 <div className="flex flex-row items-center gap-2 text-white font-medium text-sm py-2 px-3 bg-[#99C450] rounded-md">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -187,28 +187,28 @@ const Pass = () => {
                                 <div className="border border-[#BBBFBE] w-full"></div>
 
                                 <div className="bg-[#E8F0D8] p-3 rounded-[8px]">
-                                    <div className="flex flex-col gap-2">
+                                    <div className="flex flex-col gap-1">
                                         <div className="flex flex-col">
-                                            <p className="text-gray font-semibold text-sm">
+                                            <p className="text-gray font-medium text-xs">
                                                 Last Validated
                                             </p>
-                                            <p className="text-mid-green font-semibold text-sm">
+                                            <p className="text-mid-green font-medium text-xs">
                                                 {lastValidated}
                                             </p>
                                         </div>
                                         <div className="flex flex-col">
-                                            <p className="text-gray font-semibold text-sm">
+                                            <p className="text-gray font-medium text-xs">
                                                 Bus Number
                                             </p>
-                                            <p className="text-mid-green font-semibold text-sm">
+                                            <p className="text-mid-green font-medium text-xs">
                                                 {busNumber}
                                             </p>
                                         </div>
                                         <div className="flex flex-col">
-                                            <p className="text-gray font-semibold text-sm">
+                                            <p className="text-gray font-medium text-xs">
                                                 Validated By
                                             </p>
-                                            <p className="text-mid-green font-semibold text-sm">
+                                            <p className="text-mid-green font-medium text-xs">
                                                 Self
                                             </p>
                                         </div>
@@ -218,7 +218,7 @@ const Pass = () => {
                                 <div className="border border-[#BBBFBE] w-full"></div>
                             </div>
 
-                            <div className="mx-auto w-[170px] h-[170px] scale-105  bg-[url('assets/qrcode.gif')] bg-cover "></div>
+                            <div className="mx-auto w-[140px] h-[140px] mt-5 my-3 scale-105  bg-[url('assets/qrcode.gif')] bg-cover "></div>
                         </div>
                     </div>
 
