@@ -2,7 +2,8 @@ import Bookings from "./components/Bookings";
 import Home from "./components/Home";
 import Pass from "./components/Pass";
 
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import TummocMoney from "./components/TummocMoney";
 
 
 
@@ -17,6 +18,7 @@ function App() {
                     <Route index element={<Home />} />
 
                     <Route path="bookings" element={<Bookings />} />
+                    <Route path="money" element={<TummocMoney />} />
                     <Route path="pass" element={<Pass />} />
 
                     <Route path="*" element={<Home />} />

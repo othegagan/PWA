@@ -1,40 +1,39 @@
 import Navbar from "./Navbar";
 import BusIcon from "../assets/bus-icon.svg";
-import BusFillIcon from "../assets/bus-fill-icon.svg";
-import MetroIcon from "../assets/metro-icon.svg";
-import CabIcon from "../assets/cab-icon.svg";
-import AirPortRoll from "../assets/air-port-roll.svg";
 import AutoImg from "../assets/auto.png"
 import GiftImg from "../assets/gift.png"
+import MetroVideo from "../assets/metro.mp4"
+import CommuteVideo from "../assets/commute.mp4"
+import OutStationVideo from "../assets/outstation.mp4"
+import { useEffect, useState } from "react";
 
 const Home = () => {
-    // const liveData = [
-    //     {
-    //         id: 1,
-    //         name: "Bus",
-    //         image: BusIcon
-    //     },
-    //     {
-    //         id: 2,
-    //         name: "Metro",
-    //         image: BusIcon
-    //     },
-    //     {
-    //         id: 3,
-    //         name: "Direct Ride",
-    //         image: BusIcon
-    //     },
-    //     {
-    //         id: 4,
-    //         name: "Airport Roll",
-    //         image: BusIcon
-    //     }
-    // ]
+    const [placeholder, setPlaceholder] = useState('');
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const originalText = 'Search Destination';
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % (2 * originalText.length));
+
+            setPlaceholder(() => {
+                const updatedText =
+                    currentIndex < originalText.length
+                        ? originalText.substring(0, currentIndex + 1)
+                        : originalText.substring(currentIndex - originalText.length, 0);
+                return updatedText;
+            });
+        }, 180);
+
+        return () => clearInterval(intervalId);
+    }, [currentIndex]);
+
+
 
     return (
         <>
             <div className="fixed  top-0 w-full z-40">
-                <div className="bg-[#0F2D38] h-[110px] rounded-b-md">
+                <div className="bg-[#122A34] h-[110px] rounded-b-md">
                     <div className="flex flex-row justify-between py-[14px] px-6 items-center">
                         <svg
                             width="20"
@@ -52,16 +51,16 @@ const Home = () => {
                         </svg>
                         <div className="flex gap-3 items-center justify-center">
                             <svg
-                                width="7"
-                                height="10"
-                                viewBox="0 0 7 10"
+                                width="9"
+                                height="12"
+                                viewBox="0 0 9 12"
                                 fill="none">
                                 <path
                                     d="M3.5 0C1.565 0 0 1.565 0 3.5C0 6.125 3.5 10 3.5 10C3.5 10 7 6.125 7 3.5C7 1.565 5.435 0 3.5 0ZM3.5 4.75C2.81 4.75 2.25 4.19 2.25 3.5C2.25 2.81 2.81 2.25 3.5 2.25C4.19 2.25 4.75 2.81 4.75 3.5C4.75 4.19 4.19 4.75 3.5 4.75Z"
                                     fill="white"
                                 />
                             </svg>
-                            <p className="text-white font-normal text-xs">
+                            <p className="text-white font-normal text-sm">
                                 Bengaluru
                             </p>
                             <svg
@@ -135,7 +134,7 @@ const Home = () => {
                         type="search"
                         id="default-search"
                         className="block w-full h-14 pl-12  text-lg rounded-lg  placeholder-[#7C7C7C] "
-                        placeholder="Search destination"
+                        placeholder={placeholder}
                     />
 
                     <div className="absolute right-14 top-2 py-2 w-[2px] h-[75%] bg-[#E5E5E5]"></div>
@@ -157,8 +156,8 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="pt-44 pb-24 px-5 -z-10 overflow-y-auto h-full no-scrollbar">
-                <h1 className="text-[#0F2D38] font-medium text-xl">
+            <div className="pt-40 pb-24 px-5 -z-10 overflow-y-auto h-full no-scrollbar">
+                <h1 className="text-[#122A34] font-medium text-xl">
                     Passes & Tickets
                 </h1>
 
@@ -167,12 +166,12 @@ const Home = () => {
                         <img
                             src={BusIcon}
                             alt=""
-                            className="left-3 top-[10px] absolute "
+                            className="left-3 top-3 absolute "
                         />
-                        <p className="bg-[#17BBBE] rounded-full p-[1px] px-[7px] right-1 -top-2 text-[9px] w-fit absolute  text-white font-medium">
+                        {/* <p className="bg-[#17BBBE] rounded-full p-[1px] px-[7px] right-1 -top-2 text-xs w-fit absolute  text-white font-medium">
                             New
-                        </p>
-                        <p className="top-[10px] left-1/3 absolute bg-white font-semibold text-sm text-[#0F2D38]">
+                        </p> */}
+                        <p className="top-3 left-1/3 absolute bg-white font-semibold text-sm text-[#122A34]">
                             BMTC Passes
                         </p>
                     </div>
@@ -181,64 +180,50 @@ const Home = () => {
                         <img
                             src={BusIcon}
                             alt=""
-                            className="left-3 top-[10px] absolute "
+                            className="left-3 top-3 absolute "
                         />
-                        <p className="bg-[#FFCC05] rounded-full p-[1px] px-[7px] right-1 -top-2 text-[9px] w-fit absolute  text-black font-medium">
+                        <p className="bg-[#FFCC05] rounded-full p-[1px] px-[7px] right-1 -top-2 text-xs w-fit absolute  text-black font-medium shadow-md">
                             Coming Soon
                         </p>
-                        <p className="top-[10px] left-1/3 absolute bg-white font-semibold text-sm text-[#0F2D38]">
+                        <p className="top-3 left-1/3 absolute bg-white font-semibold text-sm text-[#122A34]">
                             AC Bus Tickets
                         </p>
                     </div>
                 </div>
 
-                <h1 className="text-[#0F2D38] font-medium text-xl">
+                <h1 className="text-[#122A34] font-medium text-xl">
                     Commute options available
                 </h1>
 
-                <div className=" flex items-center gap-4 mt-3">
-                    <div className="flex gap-1 flex-col justify-center items-center">
-                        <div className="flex items-center justify-center relative h-14 w-14 rounded-lg bg-[#E3F7F8] shadow-sm">
-                            <p className="rounded-full px-[3px] text-[8px] absolute right-1 top-1 bg-white">
-                                <span className="text-red-500 mb-5">.</span> Live
-                            </p>
-                            <img src={BusFillIcon} alt="" className="h-6 w-6" />
-                        </div>
-                        <p className="text-xs font-medium whitespace-nowrap">Bus</p>
-                    </div>
-
-                    <div className="flex gap-1 flex-col justify-center items-center">
-                        <div className="flex items-center justify-center relative  h-14 w-14 rounded-lg bg-[#FCE6E9] shadow-sm">
-                            <p className="rounded-full px-[3px] text-[8px] absolute right-1 top-1 bg-white">
-                                <span className="text-red-500 mb-5">.</span> Live
-                            </p>
-                            <img src={MetroIcon} alt="" className="h-6 w-6" />
-                        </div>
-                        <p className="text-xs font-medium whitespace-nowrap">Metro</p>
-                    </div>
-
-                    <div className="flex gap-1 flex-col justify-center items-center">
-                        <div className="flex items-center justify-center relative   h-14 w-14   rounded-lg bg-[#FCEFA1] shadow-sm">
-                            <p className="rounded-full px-[3px] text-[8px] absolute right-1 top-1 bg-white">
-                                <span className="text-red-500 mb-5">.</span> Live
-                            </p>
-                            <img src={CabIcon} alt="" className="h-6 w-6" />
-                        </div>
-                        <p className="text-xs font-medium whitespace-nowrap">Direct Ride</p>
-                    </div>
-
-                    <div className="flex gap-1 flex-col justify-center items-center">
-                        <div className="flex items-center justify-center relative  h-14 w-14 rounded-lg bg-[#FFECB2] shadow-sm">
-                            <p className="rounded-full px-[3px] text-[8px] absolute right-1 top-1 bg-white">
-                                <span className="text-red-500 mb-5">.</span> Live
-                            </p>
-                            <img src={AirPortRoll} alt="" className="h-6 w-6" />
-                        </div>
-                        <p className="text-xs font-medium whitespace-nowrap">Airpot Rail</p>
-                    </div>
+                <div className="overflow-hidden bg-white my-3">
+                    <video autoPlay loop muted playsInline className=" scale-[1.08]" >
+                        <source src={CommuteVideo} type="video/mp4" />
+                    </video>
                 </div>
 
-                <div className="bg-gray h-[180px] w-full rounded-lg mt-4"></div>
+
+                <div className="h-[1px] w-full bg-gray/10 my-2"></div>
+
+                <h1 className="text-[#122A34] font-medium text-xl my-3">
+                    Travel Outstation
+                </h1>
+
+                <div className="overflow-hidden bg-white">
+                    <video autoPlay loop muted playsInline className=" scale-[1.08]" >
+                        <source src={OutStationVideo} type="video/mp4" />
+                    </video>
+                </div>
+
+
+                <div className="overflow-hidden bg-white my-3">
+                    <video autoPlay loop muted playsInline className=" scale-[1.3]" >
+                        <source src={MetroVideo} type="video/mp4" />
+                    </video>
+                </div>
+
+
+
+                {/* <div className="bg-gray h-[180px] w-full rounded-lg mt-4"></div> */}
 
 
                 <div className="bg-[#122E39] h-[150px] w-full rounded-md mt-4 flex gap-2">
@@ -266,6 +251,8 @@ const Home = () => {
                         <img src={GiftImg} className="scale-[1.5] mt-2" alt="" />
                     </div>
                 </div>
+
+
             </div>
 
             <Navbar />

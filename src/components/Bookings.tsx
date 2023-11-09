@@ -37,7 +37,7 @@ const Bookings = () => {
                     <button className="w-1/2 rounded-md py-2 bg-white text-gray uppercase font-normal text-sm">Expired</button>
                 </div>
 
-                <div className="bg-gradient-to-r group from-[#0F2D38] text-white to-[#167B83] mx-1 py-4 px-5  rounded-[7px]">
+                <div className="bg-gradient-to-r group from-[#122A34] text-white to-[#167B83] mx-1 py-4 px-5  rounded-[7px]">
                     <Link to="/pass" >
                         <div className="flex justify-between items-center">
                             <div className="bg-white rounded-[10px] px-2 py-1 ">
