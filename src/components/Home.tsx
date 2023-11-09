@@ -241,7 +241,7 @@ const Home = () => {
                 <div className="bg-gray h-[180px] w-full rounded-lg mt-4"></div>
 
 
-                <div className="bg-[#122E39] h-[135px] w-full rounded-md mt-4 flex gap-2">
+                <div className="bg-[#122E39] h-[150px] w-full rounded-md mt-4 flex gap-2">
                     <div className="w-1/2 flex items-end justify-center">
                         <img src={AutoImg} alt="" />
                     </div>
