@@ -3,26 +3,38 @@ import smallQRCode from "../assets/small-qrcode.png";
 import CustomQRScanner from "./CustomQRScanner";
 import Terms from "./Terms";
 import { useEffect, useState } from "react";
-
+import PassFare from "./PassFare";
+import BookingDetails from "./BookingDetails";
 
 const Pass = () => {
-
-    const [showQRScanner, setshowQRScanner] = useState(false)
-    const [busNumber, setBusNumber] = useState("")
+    const [showQRScanner, setshowQRScanner] = useState(false);
+    const [busNumber, setBusNumber] = useState("");
     const [lastValidated, setLastValidated] = useState("");
+    const [showPassFare, setShowPassFare] = useState(false);
+    const [showBookingDetails, setShowBookingDetails] = useState(false);
 
     useEffect(() => {
-        const storedBusNumber = localStorage.getItem('busNumber');
-        const storedTime = localStorage.getItem('time');
+        const storedBusNumber = localStorage.getItem("busNumber");
+        const storedTime = localStorage.getItem("time");
         setBusNumber(storedBusNumber || "");
-        setLastValidated(storedTime || "")
-    }, [])
-
+        setLastValidated(storedTime || "");
+    }, []);
 
     return (
-
         <>
-            {showQRScanner && (<CustomQRScanner setBusNumber={setBusNumber} setshowQRScanner={setshowQRScanner} setLastValidated={setLastValidated} />)}
+            {showQRScanner && (
+                <CustomQRScanner
+                    setBusNumber={setBusNumber}
+                    setshowQRScanner={setshowQRScanner}
+                    setLastValidated={setLastValidated}
+                />
+            )}
+
+            {showBookingDetails && (
+                <BookingDetails setShowBookingDetails={setShowBookingDetails} />
+            )}
+
+            {showPassFare && <PassFare setShowPassFare={setShowPassFare} />}
 
             {!showQRScanner && (
                 <div className="flex flex-col h-screen">
@@ -52,12 +64,13 @@ const Pass = () => {
                                 Support
                             </p>
                         </div>
-                        <div className="bg-[#ECECEC] max-w-2xl  mx-5 rounded-t-[10px] mb-6 rounded-b-none" style={{
-                            boxShadow: " 0px 0px 4px 0px rgba(0, 0, 0, 0.15)",
-                        }}>
-                            <div
-                                className="max-w-2xl  bg-white px-3 py-4  rounded-[10px] "
-                            >
+                        <div
+                            className="bg-[#ECECEC] max-w-2xl  mx-5 rounded-t-[10px] mb-6 rounded-b-none"
+                            style={{
+                                boxShadow:
+                                    " 0px 0px 4px 0px rgba(0, 0, 0, 0.15)",
+                            }}>
+                            <div className="max-w-2xl  bg-white px-3 py-4  rounded-[10px] ">
                                 <div className="flex gap-[18px]">
                                     <div className="h-[70px] w-[70px] rounded-full bg-[url('assets/bmtc-logo.jpg')] bg-cover "></div>
 
@@ -80,23 +93,27 @@ const Pass = () => {
                                         </div>
 
                                         <p className="text-[14px] font-normal text-black">
-                                            <span className="text-gray">Pass ID:</span>{" "}
-                                            <span >
-                                                TPASS2397123
-                                            </span>
+                                            <span className="text-gray">
+                                                Pass ID:
+                                            </span>{" "}
+                                            <span>TPASS2397123</span>
                                         </p>
                                     </div>
                                 </div>
 
-                                <p className="underline text-center underline-offset-2 mt-2 mb-4 text-[16px] text-[#157B83] font-semibold tracking-normal">
+                                <p
+                                    onClick={() => setShowBookingDetails(true)}
+                                    className="underline text-center underline-offset-2 mt-2 mb-4 text-[16px] text-[#157B83] font-semibold tracking-normal">
                                     Click here to view validation instructions
                                 </p>
 
-                                <div className="flex h-[34px] items-center " onClick={() => {
-                                    setTimeout(() => {
-                                        setshowQRScanner(true);
-                                    }, 400);
-                                }}>
+                                <div
+                                    className="flex h-[34px] items-center "
+                                    onClick={() => {
+                                        setTimeout(() => {
+                                            setshowQRScanner(true);
+                                        }, 400);
+                                    }}>
                                     <div className=" bg-[#157B83]  p-[7px] rounded-[6px]">
                                         <img
                                             src={smallQRCode}
@@ -111,7 +128,6 @@ const Pass = () => {
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                     <div className="pt-[50px] pb-10 px-5 overflow-y-auto h-full bg-[#ECECEC] no-scrollbar">
@@ -121,7 +137,8 @@ const Pass = () => {
                         <div
                             className="max-w-2xl mx-auto  bg-white px-4 py-6 rounded-[10px] mb-6"
                             style={{
-                                boxShadow: " 0px 1px 2px 0px rgba(0, 0, 0, 0.15)",
+                                boxShadow:
+                                    " 0px 1px 2px 0px rgba(0, 0, 0, 0.15)",
                             }}>
                             <div className="flex justify-between flex-row">
                                 <div className="flex flex-col gap-2">
@@ -130,33 +147,48 @@ const Pass = () => {
                                         <p className="value">Gagan Kumar</p>
                                     </div>
                                     <div className="flex flex-col gap-0">
-                                        <p className="label">Identification type</p>
+                                        <p className="label">
+                                            Identification type
+                                        </p>
                                         <p className="value">Addhar Card</p>
                                     </div>
                                     <div className="flex flex-col gap-0">
                                         <p className="label">
-                                            Identification number (Last 4 digits)
+                                            Identification number (Last 4
+                                            digits)
                                         </p>
                                         <p className="value">0242</p>
                                     </div>
                                     <div className="flex flex-col gap-0">
-                                        <p className="label">Pass purchase date</p>
-                                        <p className="value">28 Sep 2023, 11:01 AM</p>
+                                        <p className="label">
+                                            Pass purchase date
+                                        </p>
+                                        <p className="value">
+                                            28 Sep 2023, 11:01 AM
+                                        </p>
                                     </div>
                                     <div className="flex flex-col gap-0">
                                         <p className="label">Pass valid from</p>
-                                        <p className="value">28 Sep 2023, 02:30 AM</p>
+                                        <p className="value">
+                                            28 Sep 2023, 02:30 AM
+                                        </p>
                                     </div>
                                     <div className="flex flex-col gap-0">
                                         <p className="label">Pass valid till</p>
-                                        <p className="value">28 Oct 2023, 02:29 AM</p>
+                                        <p className="value">
+                                            28 Oct 2023, 02:29 AM
+                                        </p>
                                     </div>
                                 </div>
 
                                 <div className="flex flex-col justify-between items-end">
                                     <div className="h-24 w-24 rounded-full bg-[#D9D9D9]"></div>
                                     <div className="flex flex-col justify-end items-end">
-                                        <p className="underline underline-offset-2 text-gray font-medium text-sm">
+                                        <p
+                                            className="underline underline-offset-2 text-gray font-medium text-sm"
+                                            onClick={() =>
+                                                setShowPassFare(true)
+                                            }>
                                             Pass fare
                                         </p>
                                         <p className="font-semibold text-mid-green text-xl">
@@ -225,9 +257,7 @@ const Pass = () => {
                     <Terms />
                 </div>
             )}
-
         </>
-
     );
 };
 

@@ -9,7 +9,7 @@ export default {
     extend: {
       colors: {
         'gray':"#7C7C7C",
-        'mid-green':'#0E403A'
+        'mid-green':'#122A34'
       }
     },
     fontFamily: {
