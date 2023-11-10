@@ -18,7 +18,7 @@ const Pass = () => {
         const storedTime = localStorage.getItem("time");
         setBusNumber(storedBusNumber || "");
         setLastValidated(storedTime || "");
-    }, []);
+    }, []);    
 
     return (
         <>
