@@ -1,28 +1,12 @@
 import { useState } from "react";
 //@ts-ignore
-import { DateTime } from "luxon";
-//@ts-ignore
 import { QrScanner } from "react-qrcode-scanner";
 
+import { extractBusNumber } from "../utils/extractBusNumber";
+import { getCurrentTimeFormatted } from "../utils/extractBusNumber";
 
-const CustomQRScanner = ({ setBusNumber, setshowQRScanner, setLastValidated }: any) => {
+const CustomQRScanner = ({ setBusNumber, setshowQRScanner, setLastValidated, setShowSuccess, setShowError }: any) => {
     const [hideQRScanner, setHideQRScanner] = useState("");
-
-    function extractBusNumber(inputString: any) {
-        const regex = /tummoc_qr=([A-Z0-9\s]+)&/i;
-        const match = inputString.match(regex);
-
-        if (match && match[1]) {
-            return match[1].replace("Bangalore", "");
-        } else {
-            return null; // Return null if the pattern is not found
-        }
-    }
-
-    function getCurrentTimeFormatted() {
-        const now = DateTime.now();
-        return now.toFormat("dd LLL yyyy, hh:mm a");
-    }
 
 
     const handleScan = (value: any) => {
@@ -33,13 +17,15 @@ const CustomQRScanner = ({ setBusNumber, setshowQRScanner, setLastValidated }: a
         localStorage.setItem('busNumber', busNumber);
         localStorage.setItem('time', time);
 
+        setshowQRScanner(false);
+        setShowSuccess(true);
         setHideQRScanner(busNumber);
         setBusNumber(busNumber);
-        setshowQRScanner(false);
         setLastValidated(time);
     };
 
     const handleError = (error: any) => {
+        setShowError(false);
         console.log({ error });
     };
 
@@ -55,8 +41,6 @@ const CustomQRScanner = ({ setBusNumber, setshowQRScanner, setLastValidated }: a
             {hideQRScanner === "" && (
                 <div className="h-[2px] animate-pulse bg-red-700 w-[300px] mx-auto z-40 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
             )}
-
-            {/* {hideQRScanner !== "" && <p>{hideQRScanner}</p>} */}
 
             {hideQRScanner === "" && (
                 <QrScanner
@@ -92,11 +76,14 @@ const CustomQRScanner = ({ setBusNumber, setshowQRScanner, setLastValidated }: a
                     //any valid JS-CSS can be added here
 
                     resolution={1000}
+
                     video={{
                         width: "100vw",
                         height: "100vh",
                     }}
+                    
                     showViewFinder={true}
+
                     //any valid JS-CSS can be added here
                     viewFinder={{
                         inset: "0px",

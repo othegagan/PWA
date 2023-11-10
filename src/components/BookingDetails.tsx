@@ -7,7 +7,7 @@ const BookingDetails = ({ setShowBookingDetails }: any) => {
                 onClick={() => setShowBookingDetails(false)}
                 className="fixed inset-0 z-40 flex items-center justify-center bg-black bg-opacity-60 ">
                 <div
-                    className="w-full p-4 overflow-hidden bg-white rounded-[3px]  max-w-2xl "
+                    className="w-full p-4 mx-5 overflow-hidden bg-white rounded-[3px]  max-w-2xl "
                     role="dialog"
                     onClick={() => setShowBookingDetails(true)}>
                     <div>

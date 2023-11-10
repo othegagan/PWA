@@ -5,6 +5,8 @@ import Terms from "./Terms";
 import { useEffect, useState } from "react";
 import PassFare from "./PassFare";
 import BookingDetails from "./BookingDetails";
+import SuccessAlert from "./SuccessAlert";
+import ErrorAlert from "./ErrorAlert";
 
 const Pass = () => {
     const [showQRScanner, setshowQRScanner] = useState(false);
@@ -12,13 +14,15 @@ const Pass = () => {
     const [lastValidated, setLastValidated] = useState("");
     const [showPassFare, setShowPassFare] = useState(false);
     const [showBookingDetails, setShowBookingDetails] = useState(false);
+    const [showSuccess, setShowSuccess] = useState(false);
+    const [showError, setShowError] = useState(true);
 
     useEffect(() => {
         const storedBusNumber = localStorage.getItem("busNumber");
         const storedTime = localStorage.getItem("time");
         setBusNumber(storedBusNumber || "");
         setLastValidated(storedTime || "");
-    }, []);    
+    }, []);
 
     return (
         <>
@@ -27,6 +31,8 @@ const Pass = () => {
                     setBusNumber={setBusNumber}
                     setshowQRScanner={setshowQRScanner}
                     setLastValidated={setLastValidated}
+                    setShowSuccess={setShowSuccess}
+                    setShowError={setShowError}
                 />
             )}
 
@@ -35,6 +41,13 @@ const Pass = () => {
             )}
 
             {showPassFare && <PassFare setShowPassFare={setShowPassFare} />}
+
+            {showSuccess && (
+                <SuccessAlert setShowSuccess={setShowSuccess} />
+            )}
+
+            {showError && <ErrorAlert setShowError={setShowError} />}
+
 
             {!showQRScanner && (
                 <div className="flex flex-col h-screen">
