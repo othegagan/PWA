@@ -1,6 +1,9 @@
+import { useState } from "react"
 import { Link } from "react-router-dom"
 
 const Bookings = () => {
+
+    const [active, setActive] = useState("active")
     return (
         <>
             <div className="flex flex-row  w-full bg-[#122A34] h-[50px]">
@@ -33,36 +36,75 @@ const Bookings = () => {
             <div className="h-full bg-cover bg-[url('assets/long-bg-design.png')]">
 
                 <div className="m-2 flex items-center justify-between gap-4">
-                    <button className="w-1/2 rounded-md py-2 bg-[#99C450] text-white uppercase font-normal text-sm">Active</button>
-                    <button className="w-1/2 rounded-md py-2 bg-white text-gray uppercase font-normal text-sm">Expired</button>
+                    <div onClick={() => setActive("active")} className={`w-1/2 text-center rounded-md py-2 uppercase font-normal text-sm ${active === "active" ? "bg-[#99C450] text-white" : null
+                        }`}>Active</div>
+                    <div
+                        onClick={() => setActive("expired")}
+                        className={`w-1/2 text-center rounded-md py-2 uppercase font-normal text-sm ${active === "expired" ? "bg-red-500 text-white" : null
+                            }`}
+                    >
+                        Expired
+                    </div>
                 </div>
 
-                <div className="bg-gradient-to-r group from-[#122A34] text-white to-[#167B83] mx-1 py-4 px-5  rounded-[7px]">
-                    <Link to="/pass" >
-                        <div className="flex justify-between items-center">
-                            <div className="bg-white rounded-[10px] px-2 py-1 ">
-                                <p className="text-black font-normal text-xs">
-                                    Ordinary
+                {active === "active" && (
+                    <div className="bg-gradient-to-r group from-[#122A34] text-white to-[#167B83] mx-1 py-4 px-5  rounded-[7px]">
+                        <Link to="/pass" >
+                            <div className="flex justify-between items-center">
+                                <div className="bg-white rounded-[10px] px-2 py-1 ">
+                                    <p className="text-black font-normal text-xs">
+                                        Ordinary
+                                    </p>
+                                </div>
+                                <p className="font-semibold text-white text-xl">
+                                    ₹ 1050.0
                                 </p>
                             </div>
-                            <p className="font-semibold text-white text-xl">
-                                ₹ 1050.0
-                            </p>
-                        </div>
 
-                        <h1 className="font-normal text-[20px] text-white mt-[10px] mb-[18px]">
-                            Ordinary Service Monthly Pass
-                        </h1>
-                        <div className="flex justify-between items-center">
-                            <div className="flex flex-col">
-                                <p className="text-sm font-normal">Pass valid till</p>
-                                <p className="text-xs font-normal">29 Nov 2023, 11:59 PM</p>
+                            <h1 className="font-normal text-[20px] text-white mt-[10px] mb-[18px]">
+                                Ordinary Service Monthly Pass
+                            </h1>
+                            <div className="flex justify-between items-center">
+                                <div className="flex flex-col">
+                                    <p className="text-sm font-normal">Pass valid till</p>
+                                    <p className="text-xs font-normal">29 Nov 2023, 11:59 PM</p>
+                                </div>
+                                <div className="px-4 py-[9px] group-hover:bg-[#62afb6] bg-[#4C898E] rounded shadow" > {">"}</div>
+
                             </div>
-                            <div className="px-4 py-[9px] group-hover:bg-[#62afb6] bg-[#4C898E] rounded shadow" > {">"}</div>
+                        </Link>
+                    </div>
+                )}
 
+                {active == "expired" && (
+                    <div className="bg-gradient-to-r group from-[#696969] text-white to-[#B8B8B8] mx-1 py-4 px-5  rounded-[7px]">
+                        <div  >
+                            <div className="flex justify-between items-center">
+                                <div className="bg-white rounded-[10px] px-2 py-1 ">
+                                    <p className="text-black font-normal text-xs">
+                                        Ordinary
+                                    </p>
+                                </div>
+                                <p className="font-semibold text-white text-xl">
+                                    ₹ 1050.0
+                                </p>
+                            </div>
+
+                            <h1 className="font-normal text-[20px] text-white mt-[10px] mb-[18px]">
+                                Ordinary Service Monthly Pass
+                            </h1>
+                            <div className="flex justify-between items-center">
+                                <div className="flex flex-col">
+                                    <p className="text-sm font-normal">Pass valid till</p>
+                                    <p className="text-xs font-normal">29 Nov 2023, 11:59 PM</p>
+                                </div>
+                                <div className="px-4 py-[9px] bg-white text-[#122A34] rounded shadow" > Renew</div>
+                            </div>
                         </div>
-                    </Link>
-                </div>
+                    </div>
+                )}
+
+
 
                 <div className="flex flex-row justify-between items-center px-2">
                     <div className="border border-[#E5E5E5] w-full h-[2px]"></div>

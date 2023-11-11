@@ -5,7 +5,7 @@ const PassFare = ({ setShowPassFare }: any) => {
                 onClick={() => setShowPassFare(false)}
                 className="fixed inset-0 z-40 flex items-center justify-center bg-black bg-opacity-60 ">
                 <div
-                    className="w-full p-4 overflow-hidden bg-white rounded-[3px]  max-w-[250px] "
+                    className="w-full p-4 overflow-hidden bg-white rounded-[3px]  max-w-[270px] shadow-xl "
                     role="dialog" onClick={() => setShowPassFare(true)}>
                     <div>
                         <p className=" text-lg font-medium text-[#112C35]">
