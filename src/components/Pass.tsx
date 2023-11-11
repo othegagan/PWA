@@ -15,7 +15,7 @@ const Pass = () => {
     const [showPassFare, setShowPassFare] = useState(false);
     const [showBookingDetails, setShowBookingDetails] = useState(false);
     const [showSuccess, setShowSuccess] = useState(false);
-    const [showError, setShowError] = useState(true);
+    const [showError, setShowError] = useState(false);
 
     useEffect(() => {
         const storedBusNumber = localStorage.getItem("busNumber");

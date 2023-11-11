@@ -34,7 +34,7 @@
 
 @font-face {
     font-family: 'mazz';
-    src: url('assets/MazzardM-Light.ttf');
+    src: url('assets/fonts/MazzardM-Light.ttf');
     font-weight: 300;
     font-style: normal;
 }
@@ -42,7 +42,7 @@
 
 @font-face {
     font-family: 'mazz';
-    src: url('assets/MazzardM-Regular.ttf');
+    src: url('assets/fonts/MazzardM-Regular.ttf');
     font-weight: 400;
     font-style: normal;
 }
@@ -50,28 +50,28 @@
 
 @font-face {
     font-family: 'mazz';
-    src: url('assets/MazzardM-Medium.ttf');
+    src: url('assets/fonts/MazzardM-Medium.ttf');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'mazz';
-    src: url('assets/MazzardM-SemiBold.ttf');
+    src: url('assets/fonts/MazzardM-SemiBold.ttf');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'mazz';
-    src: url('assets/MazzardM-Bold.ttf');
+    src: url('assets/fonts/MazzardM-Bold.ttf');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'mazz';
-    src: url('assets/MazzardM-Black.ttf');
+    src: url('assets/fonts/MazzardM-Black.ttf');
     font-weight: 800;
     font-style: normal;
 }

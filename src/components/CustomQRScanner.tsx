@@ -25,8 +25,8 @@ const CustomQRScanner = ({ setBusNumber, setshowQRScanner, setLastValidated, set
     };
 
     const handleError = (error: any) => {
-        setShowError(false);
         console.log({ error });
+        setShowError(false);
     };
 
     const style = {
@@ -81,7 +81,7 @@ const CustomQRScanner = ({ setBusNumber, setshowQRScanner, setLastValidated, set
                         width: "100vw",
                         height: "100vh",
                     }}
-                    
+
                     showViewFinder={true}
 
                     //any valid JS-CSS can be added here
