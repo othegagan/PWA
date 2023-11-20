@@ -51,8 +51,8 @@ const Pass = () => {
 
             {!showQRScanner && (
                 <div className="flex flex-col h-screen">
-                    <div className="w-full  h-[160px] bg-cover bg-[url('assets/pass-top-design.png')] border-b border-zinc-200  fixed top-0">
-                        <div className="px-5 pt-4 pb-5 flex flex-row justify-between items-center">
+                    <div className="w-full  h-[160px] bg-cover bg-[url('assets/pass-top-design.png')] bg-opacity-50 border-b border-zinc-200  fixed top-0">
+                        <div className="px-6 pt-4 pb-5 flex flex-row justify-between items-center">
                             <div className="flex flex-row items-center gap-6">
                                 <Link to="/bookings">
                                     <svg
@@ -78,7 +78,7 @@ const Pass = () => {
                             </p>
                         </div>
                         <div
-                            className="bg-[#ECECEC] max-w-2xl  mx-5 rounded-t-[10px] mb-6 rounded-b-none"
+                            className="bg-[#ECECEC] max-w-2xl  mx-4 rounded-t-[10px] mb-6 rounded-b-none"
                             style={{
                                 boxShadow:
                                     " 0px 0px 4px 0px rgba(0, 0, 0, 0.15)",
@@ -109,14 +109,14 @@ const Pass = () => {
                                             <span className="text-gray">
                                                 Pass ID:
                                             </span>{" "}
-                                            <span>TPASS2397123</span>
+                                            <span>TPASS2145877</span>
                                         </p>
                                     </div>
                                 </div>
 
                                 <p
                                     onClick={() => setShowBookingDetails(true)}
-                                    className="underline text-center underline-offset-2 mt-2 mb-4 text-[16px] text-[#157B83] font-semibold tracking-normal">
+                                    className="underline text-center underline-offset-2 mt-2 mb-4 text-[15px] text-[#157B83] font-semibold tracking-normal">
                                     Click here to view validation instructions
                                 </p>
 
@@ -143,12 +143,12 @@ const Pass = () => {
                         </div>
                     </div>
 
-                    <div className="pt-[50px] pb-10 px-5 overflow-y-auto h-full bg-[#ECECEC] no-scrollbar">
+                    <div className="pt-[50px] pb-10 px-4 overflow-y-auto h-full bg-[#ECECEC] no-scrollbar">
                         <h2 className="font-bold text-[16px] ml-2 text-[#0D2733] mt-[14rem]">
                             Booking Details
                         </h2>
                         <div
-                            className="max-w-2xl mx-auto  bg-white px-4 py-6 rounded-[10px] mb-6"
+                            className="max-w-2xl mx-auto  bg-white px-4 py-6 pb-3 rounded-[10px] mb-6"
                             style={{
                                 boxShadow:
                                     " 0px 1px 2px 0px rgba(0, 0, 0, 0.15)",
@@ -177,26 +177,26 @@ const Pass = () => {
                                             Pass purchase date
                                         </p>
                                         <p className="value">
-                                            28 Sep 2023, 11:01 AM
+                                            30 Oct 2023, 09:28 AM
                                         </p>
                                     </div>
                                     <div className="flex flex-col gap-0">
                                         <p className="label">Pass valid from</p>
                                         <p className="value">
-                                            28 Sep 2023, 02:30 AM
+                                        30 Oct 2023, 09:28 AM
                                         </p>
                                     </div>
                                     <div className="flex flex-col gap-0">
                                         <p className="label">Pass valid till</p>
                                         <p className="value">
-                                            28 Oct 2023, 02:29 AM
+                                            29 Nov 2023, 11:59 PM
                                         </p>
                                     </div>
                                 </div>
 
                                 <div className="flex flex-col justify-between items-end">
-                                    <div className="h-24 w-24 rounded-full bg-[#D9D9D9]"></div>
-                                    <div className="flex flex-col justify-end items-end">
+                                    <div className="h-24 w-24 rounded-full bg-[url('assets/photo.png')] bg-cover"></div>
+                                    <div className="flex flex-col justify-end items-end ">
                                         <p
                                             className="underline underline-offset-2 text-gray font-medium text-sm"
                                             onClick={() =>
@@ -204,14 +204,14 @@ const Pass = () => {
                                             }>
                                             Pass fare
                                         </p>
-                                        <p className="font-semibold text-mid-green text-xl">
+                                        <p className="font-semibold leading-none text-mid-green text-xl">
                                             ₹ 1050.0
                                         </p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className=" flex justify-center items-center my-7">
+                            <div className=" flex justify-center items-center my-5">
                                 <div className="flex flex-row items-center gap-2 text-white font-medium text-sm py-2 px-3 bg-[#99C450] rounded-md">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -238,7 +238,7 @@ const Pass = () => {
                                                 Last Validated
                                             </p>
                                             <p className="text-mid-green font-medium text-sm">
-                                                {lastValidated}
+                                                {lastValidated} kjk
                                             </p>
                                         </div>
                                         <div className="flex flex-col">
@@ -246,7 +246,7 @@ const Pass = () => {
                                                 Bus Number
                                             </p>
                                             <p className="text-mid-green font-medium text-sm">
-                                                {busNumber}
+                                                {busNumber} jn
                                             </p>
                                         </div>
                                         <div className="flex flex-col">
@@ -263,7 +263,7 @@ const Pass = () => {
                                 <div className="border border-[#BBBFBE] w-full"></div>
                             </div>
 
-                            <div className="mx-auto w-[150px] h-[150px] mt-5 my-3 scale-105  bg-[url('assets/qrcode.gif')] bg-cover "></div>
+                            <div className="mx-auto w-[170px] h-[170px] my-7    bg-[url('assets/qrcode.gif')] bg-cover "></div>
                         </div>
                     </div>
 
