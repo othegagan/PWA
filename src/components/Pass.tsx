@@ -238,7 +238,7 @@ const Pass = () => {
                                                 Last Validated
                                             </p>
                                             <p className="text-mid-green font-medium text-sm">
-                                                {lastValidated} kjk
+                                                {lastValidated}
                                             </p>
                                         </div>
                                         <div className="flex flex-col">
@@ -246,7 +246,7 @@ const Pass = () => {
                                                 Bus Number
                                             </p>
                                             <p className="text-mid-green font-medium text-sm">
-                                                {busNumber} jn
+                                                {busNumber}
                                             </p>
                                         </div>
                                         <div className="flex flex-col">
