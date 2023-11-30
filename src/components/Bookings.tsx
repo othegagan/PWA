@@ -75,7 +75,7 @@ const Bookings = () => {
                                         Pass valid till
                                     </p>
                                     <p className="text-xs font-normal">
-                                        29 Nov 2023, 11:59 PM
+                                        29 Dec 2023, 11:59 PM
                                     </p>
                                 </div>
                                 <div className="px-4 py-[9px] group-hover:bg-[#62afb6] bg-[#4C898E] rounded shadow">
@@ -114,7 +114,6 @@ const Bookings = () => {
                                             27 Oct 2023, 11:59 PM
                                         </p>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -143,7 +142,6 @@ const Bookings = () => {
                                             27 Sep 2023, 11:59 PM
                                         </p>
                                     </div>
-
                                 </div>
                             </div>
                         </div>

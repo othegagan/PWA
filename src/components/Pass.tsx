@@ -42,12 +42,9 @@ const Pass = () => {
 
             {showPassFare && <PassFare setShowPassFare={setShowPassFare} />}
 
-            {showSuccess && (
-                <SuccessAlert setShowSuccess={setShowSuccess} />
-            )}
+            {showSuccess && <SuccessAlert setShowSuccess={setShowSuccess} />}
 
             {showError && <ErrorAlert setShowError={setShowError} />}
-
 
             {!showQRScanner && (
                 <div className="flex flex-col h-screen">
@@ -109,7 +106,7 @@ const Pass = () => {
                                             <span className="text-gray">
                                                 Pass ID:
                                             </span>{" "}
-                                            <span>TPASS2145877</span>
+                                            <span>TPASS8922290</span>
                                         </p>
                                     </div>
                                 </div>
@@ -177,19 +174,19 @@ const Pass = () => {
                                             Pass purchase date
                                         </p>
                                         <p className="value">
-                                            30 Oct 2023, 09:28 AM
+                                            30 Nov 2023, 08:28 AM
                                         </p>
                                     </div>
                                     <div className="flex flex-col gap-0">
                                         <p className="label">Pass valid from</p>
                                         <p className="value">
-                                        30 Oct 2023, 09:28 AM
+                                            30 Nov 2023, 08:28 AM
                                         </p>
                                     </div>
                                     <div className="flex flex-col gap-0">
                                         <p className="label">Pass valid till</p>
                                         <p className="value">
-                                            29 Nov 2023, 11:59 PM
+                                            29 Dec 2023, 11:59 PM
                                         </p>
                                     </div>
                                 </div>
