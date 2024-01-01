@@ -28,6 +28,19 @@ const Home = () => {
         return () => clearInterval(intervalId);
     }, [currentIndex]);
 
+    const currentDate = new Date();
+    const currentHour = currentDate.getHours();
+
+    let greetingMessage = "";
+
+    if (currentHour < 12) {
+        greetingMessage = "Good Morning";
+    } else if (currentHour < 18) {
+        greetingMessage = "Good Afternoon";
+    } else {
+        greetingMessage = "Good Evening";
+    }
+
 
 
     return (
@@ -78,7 +91,7 @@ const Home = () => {
 
                     <div className="flex flex-row  text-white items-center justify-between px-6 my-2">
                         <h2 className="font-medium text-lg">
-                            Good Afternoon gagan
+                            {greetingMessage} Gagan
                         </h2>
                         <div className="flex items-center justify-center gap-2">
                             <p>28.5 °C</p>
