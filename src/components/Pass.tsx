@@ -57,7 +57,8 @@ const Pass = () => {
                                         width="14"
                                         height="14"
                                         viewBox="0 0 14 14"
-                                        fill="none">
+                                        fill="none"
+                                    >
                                         <path
                                             d="M14 6.125H3.35125L8.2425 1.23375L7 0L0 7L7 14L8.23375 12.7663L3.35125 7.875H14V6.125Z"
                                             fill="white"
@@ -79,7 +80,8 @@ const Pass = () => {
                             style={{
                                 boxShadow:
                                     " 0px 0px 4px 0px rgba(0, 0, 0, 0.15)",
-                            }}>
+                            }}
+                        >
                             <div className="max-w-2xl  bg-white px-3 py-4  rounded-[10px] ">
                                 <div className="flex gap-[18px]">
                                     <div className="h-[70px] w-[70px] rounded-full bg-[url('assets/bmtc-logo.jpg')] bg-cover "></div>
@@ -113,7 +115,8 @@ const Pass = () => {
 
                                 <p
                                     onClick={() => setShowBookingDetails(true)}
-                                    className="underline text-center underline-offset-2 mt-2 mb-4 text-[15px] text-[#157B83] font-semibold tracking-normal">
+                                    className="underline text-center underline-offset-2 mt-2 mb-4 text-[15px] text-[#157B83] font-semibold tracking-normal"
+                                >
                                     Click here to view validation instructions
                                 </p>
 
@@ -123,7 +126,8 @@ const Pass = () => {
                                         setTimeout(() => {
                                             setshowQRScanner(true);
                                         }, 400);
-                                    }}>
+                                    }}
+                                >
                                     <div className=" bg-[#157B83]  p-[7px] rounded-[6px]">
                                         <img
                                             src={smallQRCode}
@@ -149,7 +153,8 @@ const Pass = () => {
                             style={{
                                 boxShadow:
                                     " 0px 1px 2px 0px rgba(0, 0, 0, 0.15)",
-                            }}>
+                            }}
+                        >
                             <div className="flex justify-between flex-row">
                                 <div className="flex flex-col gap-2">
                                     <div className="flex flex-col gap-0">
@@ -174,19 +179,19 @@ const Pass = () => {
                                             Pass purchase date
                                         </p>
                                         <p className="value">
-                                            30 Nov 2023, 08:28 AM
+                                            30 Dec 2023, 08:28 AM
                                         </p>
                                     </div>
                                     <div className="flex flex-col gap-0">
                                         <p className="label">Pass valid from</p>
                                         <p className="value">
-                                            30 Nov 2023, 08:28 AM
+                                            30 Dec 2023, 08:28 AM
                                         </p>
                                     </div>
                                     <div className="flex flex-col gap-0">
                                         <p className="label">Pass valid till</p>
                                         <p className="value">
-                                            29 Dec 2023, 11:59 PM
+                                            29 Jan 2024, 11:59 PM
                                         </p>
                                     </div>
                                 </div>
@@ -198,7 +203,8 @@ const Pass = () => {
                                             className="underline underline-offset-2 text-gray font-medium text-sm"
                                             onClick={() =>
                                                 setShowPassFare(true)
-                                            }>
+                                            }
+                                        >
                                             Pass fare
                                         </p>
                                         <p className="font-semibold leading-none text-mid-green text-xl">
@@ -215,7 +221,8 @@ const Pass = () => {
                                         width="12"
                                         height="10"
                                         viewBox="0 0 12 10"
-                                        fill="none">
+                                        fill="none"
+                                    >
                                         <path
                                             d="M10.8 0H1.2C0.54 0 0.00599999 0.5625 0.00599999 1.25L0 8.75C0 9.4375 0.54 10 1.2 10H10.8C11.46 10 12 9.4375 12 8.75V1.25C12 0.5625 11.46 0 10.8 0ZM10.8 8.75H1.2V2.5L6 5.625L10.8 2.5V8.75ZM6 4.375L1.2 1.25H10.8L6 4.375Z"
                                             fill="currentColor"

@@ -12,7 +12,8 @@ const Bookings = () => {
                             width="14"
                             height="14"
                             viewBox="0 0 14 14"
-                            fill="none">
+                            fill="none"
+                        >
                             <path
                                 d="M14 6.125H3.35125L8.2425 1.23375L7 0L0 7L7 14L8.23375 12.7663L3.35125 7.875H14V6.125Z"
                                 fill="white"
@@ -38,7 +39,8 @@ const Bookings = () => {
                             active === "active"
                                 ? "bg-[#99C450] text-white"
                                 : null
-                        }`}>
+                        }`}
+                    >
                         Active
                     </div>
                     <div
@@ -47,7 +49,8 @@ const Bookings = () => {
                             active === "expired"
                                 ? "bg-red-500 text-white"
                                 : null
-                        }`}>
+                        }`}
+                    >
                         Expired
                     </div>
                 </div>
@@ -75,7 +78,7 @@ const Bookings = () => {
                                         Pass valid till
                                     </p>
                                     <p className="text-xs font-normal">
-                                        29 Dec 2023, 11:59 PM
+                                        29 Jan 2024, 11:59 PM
                                     </p>
                                 </div>
                                 <div className="px-4 py-[9px] group-hover:bg-[#62afb6] bg-[#4C898E] rounded shadow">
