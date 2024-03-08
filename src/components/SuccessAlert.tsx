@@ -43,7 +43,7 @@ const SuccessAlert = ({ setShowSuccess }: any) => {
                         <div className="flex justify-between items-center">
                             <p className="label text-sm">Pass number</p>
                             <p className="value text-sm text-[#112C35]">
-                                TPASS8922290
+                                TPASS1390276
                             </p>
                         </div>
 
@@ -57,7 +57,7 @@ const SuccessAlert = ({ setShowSuccess }: any) => {
                         <div className="flex justify-between items-center">
                             <p className="label text-sm">Pass valid till</p>
                             <p className="value text-sm text-[#112C35]">
-                                29 Jan 2024, 11:59 PM
+                                31 Mar 2024, 11:59 PM
                             </p>
                         </div>
                     </div>

@@ -11,7 +11,7 @@ function App() {
     return (
         <>
 
-            <div className="overflow-hidden w-screen h-screen ">
+            <div className="overflow-hidden  min-h-screen  overflow-x-hidden">
                 <Routes>
                     <Route path="/" element={<Home />}>
                     </Route>

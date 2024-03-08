@@ -1,26 +1,31 @@
 import Navbar from "./Navbar";
-import BusIcon from "../assets/bus-icon.svg";
-import AutoImg from "../assets/auto.png"
-import GiftImg from "../assets/gift.png"
-import MetroVideo from "../assets/metro.mp4"
-import CommuteVideo from "../assets/commute.mp4"
-import OutStationVideo from "../assets/outstation.mp4"
+import AutoImg from "../assets/auto.png";
+import GiftImg from "../assets/gift.png";
+import MetroVideo from "../assets/metro.mp4";
+import OutStationVideo from "../assets/outstation.mp4";
 import { useEffect, useState } from "react";
+import Icons from "../assets/homeicons.jpeg";
+import PassAndTickets from "../assets/passandticket.jpeg";
 
 const Home = () => {
-    const [placeholder, setPlaceholder] = useState('');
+    const [placeholder, setPlaceholder] = useState("");
     const [currentIndex, setCurrentIndex] = useState(0);
-    const originalText = 'Search Destination';
+    const originalText = "Search Destination";
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % (2 * originalText.length));
+            setCurrentIndex(
+                (prevIndex) => (prevIndex + 1) % (2 * originalText.length)
+            );
 
             setPlaceholder(() => {
                 const updatedText =
                     currentIndex < originalText.length
                         ? originalText.substring(0, currentIndex + 1)
-                        : originalText.substring(currentIndex - originalText.length, 0);
+                        : originalText.substring(
+                              currentIndex - originalText.length,
+                              0
+                          );
                 return updatedText;
             });
         }, 180);
@@ -41,8 +46,6 @@ const Home = () => {
         greetingMessage = "Good Evening";
     }
 
-
-
     return (
         <>
             <div className="fixed  top-0 w-full z-40">
@@ -52,7 +55,8 @@ const Home = () => {
                             width="20"
                             height="14"
                             viewBox="0 0 20 14"
-                            fill="none">
+                            fill="none"
+                        >
                             <path
                                 d="M0 14H14V12.1667H0V14ZM0 9.41667H14V7.58333H0V9.41667ZM0 3V4.83333H14V3H0Z"
                                 fill="white"
@@ -67,7 +71,8 @@ const Home = () => {
                                 width="9"
                                 height="12"
                                 viewBox="0 0 9 12"
-                                fill="none">
+                                fill="none"
+                            >
                                 <path
                                     d="M3.5 0C1.565 0 0 1.565 0 3.5C0 6.125 3.5 10 3.5 10C3.5 10 7 6.125 7 3.5C7 1.565 5.435 0 3.5 0ZM3.5 4.75C2.81 4.75 2.25 4.19 2.25 3.5C2.25 2.81 2.81 2.25 3.5 2.25C4.19 2.25 4.75 2.81 4.75 3.5C4.75 4.19 4.19 4.75 3.5 4.75Z"
                                     fill="white"
@@ -80,7 +85,8 @@ const Home = () => {
                                 width="10"
                                 height="8"
                                 viewBox="0 0 10 8"
-                                fill="none">
+                                fill="none"
+                            >
                                 <path
                                     d="M1.175 0.500002L5 4.82659L8.825 0.500002L10 1.83199L5 7.5L0 1.83199L1.175 0.500002Z"
                                     fill="white"
@@ -99,7 +105,8 @@ const Home = () => {
                                 width="18"
                                 height="11"
                                 viewBox="0 0 18 11"
-                                fill="none">
+                                fill="none"
+                            >
                                 <path
                                     d="M14.5125 4.1525C14.0025 1.78062 11.73 0 9 0C6.8325 0 4.95 1.1275 4.0125 2.7775C1.755 2.9975 0 4.75063 0 6.875C0 9.15063 2.0175 11 4.5 11H14.25C16.32 11 18 9.46 18 7.5625C18 5.7475 16.4625 4.27625 14.5125 4.1525Z"
                                     fill="url(#paint0_linear_86_197)"
@@ -111,7 +118,8 @@ const Home = () => {
                                         y1="7.99219"
                                         x2="21.6513"
                                         y2="7.17419"
-                                        gradientUnits="userSpaceOnUse">
+                                        gradientUnits="userSpaceOnUse"
+                                    >
                                         <stop
                                             offset="0.338191"
                                             stop-color="#F6F6F6"
@@ -134,7 +142,8 @@ const Home = () => {
                             width="18"
                             height="18"
                             viewBox="0 0 18 18"
-                            fill="none">
+                            fill="none"
+                        >
                             <path
                                 fill-rule="evenodd"
                                 clip-rule="evenodd"
@@ -157,7 +166,8 @@ const Home = () => {
                             width="28"
                             height="28"
                             viewBox="0 0 28 28"
-                            fill="none">
+                            fill="none"
+                        >
                             <path
                                 fill-rule="evenodd"
                                 clip-rule="evenodd"
@@ -174,16 +184,27 @@ const Home = () => {
                     Passes & Tickets
                 </h1>
 
-                <div className="flex flex-row gap-3 mt-3">
+                <div className="overflow-hidden bg-white my-3">
+                    <img
+                        src={PassAndTickets}
+                        alt=""
+                        className="w-full object-cover -ml-2 -mt-1 scale-105"
+                    />
+                    {/* <video autoPlay loop muted playsInline className=" scale-[1.08]" >
+                        <source src={CommuteVideo} type="video/mp4" />
+                    </video> */}
+                </div>
+                {/* <div cla
+                ssName="flex flex-row gap-3 mt-3">
                     <div className="bg-contain bg-no-repeat relative bg-[url('assets/gradient-outline.svg')] w-1/2 h-16">
                         <img
                             src={BusIcon}
                             alt=""
                             className="left-3 top-3 absolute "
                         />
-                        {/* <p className="bg-[#17BBBE] rounded-full p-[1px] px-[7px] right-1 -top-2 text-xs w-fit absolute  text-white font-medium">
+                         <p className="bg-[#17BBBE] rounded-full p-[1px] px-[7px] right-1 -top-2 text-xs w-fit absolute  text-white font-medium">
                             New
-                        </p> */}
+                        </p>
                         <p className="top-3 left-1/3 absolute bg-white font-semibold text-sm text-[#122A34]">
                             BMTC Passes
                         </p>
@@ -202,18 +223,22 @@ const Home = () => {
                             AC Bus Tickets
                         </p>
                     </div>
-                </div>
+                </div> */}
 
                 <h1 className="text-[#122A34] font-medium text-xl">
                     Commute options available
                 </h1>
 
                 <div className="overflow-hidden bg-white my-3">
-                    <video autoPlay loop muted playsInline className=" scale-[1.08]" >
+                    <img
+                        src={Icons}
+                        alt=""
+                        className="w-full object-cover -ml-2 -mt-4 scale-105"
+                    />
+                    {/* <video autoPlay loop muted playsInline className=" scale-[1.08]" >
                         <source src={CommuteVideo} type="video/mp4" />
-                    </video>
+                    </video> */}
                 </div>
-
 
                 <div className="h-[1px] w-full bg-gray/10 my-2"></div>
 
@@ -222,30 +247,42 @@ const Home = () => {
                 </h1>
 
                 <div className="overflow-hidden bg-white">
-                    <video autoPlay loop muted playsInline className=" scale-[1.08]" >
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className=" scale-[1.08]"
+                    >
                         <source src={OutStationVideo} type="video/mp4" />
                     </video>
                 </div>
 
-
                 <div className="overflow-hidden bg-white my-3">
-                    <video autoPlay loop muted playsInline className=" scale-[1.3]" >
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className=" scale-[1.3]"
+                    >
                         <source src={MetroVideo} type="video/mp4" />
                     </video>
                 </div>
 
-
-
                 {/* <div className="bg-gray h-[180px] w-full rounded-lg mt-4"></div> */}
-
 
                 <div className="bg-[#122E39] h-[150px] w-full rounded-md mt-4 flex gap-2">
                     <div className="w-1/2 flex items-end justify-center">
                         <img src={AutoImg} alt="" />
                     </div>
                     <div className="flex flex-col justify-center ">
-                        <h2 className="text-white font-bold text-lg m-0 leading-none">Book A Ride &</h2>
-                        <h2 className="text-transparent font-bold  m-0 text-xl tracking-wide bg-clip-text bg-gradient-to-r from-[#1FADB1] via-[#78BA73 ] to-[#BCAD37] leading-none">Earn Cashback</h2>
+                        <h2 className="text-white font-bold text-lg m-0 leading-none">
+                            Book A Ride &
+                        </h2>
+                        <h2 className="text-transparent font-bold  m-0 text-xl tracking-wide bg-clip-text bg-gradient-to-r from-[#1FADB1] via-[#78BA73 ] to-[#BCAD37] leading-none">
+                            Earn Cashback
+                        </h2>
                         <p className="text-white text-sm">On Every Booking</p>
                     </div>
                 </div>
@@ -257,15 +294,19 @@ const Home = () => {
                             matters to you the most.
                         </p>
 
-                        <p className="bg-[#99C450] text-white shadow-md py-[10px] px-3 font-semibold rounded-lg w-fit">Vote Now</p>
+                        <p className="bg-[#99C450] text-white shadow-md py-[10px] px-3 font-semibold rounded-lg w-fit">
+                            Vote Now
+                        </p>
                     </div>
 
                     <div className="w-1/4 -z-0">
-                        <img src={GiftImg} className="scale-[1.5] mt-2" alt="" />
+                        <img
+                            src={GiftImg}
+                            className="scale-[1.5] mt-2"
+                            alt=""
+                        />
                     </div>
                 </div>
-
-
             </div>
 
             <Navbar />
