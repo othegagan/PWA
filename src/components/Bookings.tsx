@@ -78,7 +78,7 @@ const Bookings = () => {
                                         Pass valid till
                                     </p>
                                     <p className="text-xs font-normal">
-                                        31 Mar 2024, 11:59 PM
+                                        05 May 2024, 11:59 PM
                                     </p>
                                 </div>
                                 <div className="px-4 py-[9px] group-hover:bg-[#62afb6] bg-[#4C898E] rounded shadow">
