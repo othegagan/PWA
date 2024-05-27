@@ -57,7 +57,7 @@ const SuccessAlert = ({ setShowSuccess }: any) => {
                         <div className="flex justify-between items-center">
                             <p className="label text-sm">Pass valid till</p>
                             <p className="value text-sm text-[#112C35]">
-                                05 May 2024, 11:59 PM
+                                26 Jun 2024, 11:59 PM
                             </p>
                         </div>
                     </div>

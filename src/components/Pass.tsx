@@ -168,19 +168,19 @@ const Pass = () => {
                                 <div className="flex flex-col gap-0">
                                     <p className="label">Pass purchase date</p>
                                     <p className="value">
-                                        06 Apr 2024, 08:28 AM
+                                        27 May 2024, 08:28 AM
                                     </p>
                                 </div>
                                 <div className="flex flex-col gap-0">
                                     <p className="label">Pass valid from</p>
                                     <p className="value">
-                                        06 Apr 2024, 12:00 AM
+                                        27 May 2024, 12:00 AM
                                     </p>
                                 </div>
                                 <div className="flex flex-col gap-0">
                                     <p className="label">Pass valid till</p>
                                     <p className="value">
-                                        05 May 2024, 11:59 PM
+                                        26 Jun 2024, 11:59 PM
                                     </p>
                                 </div>
                             </div>
