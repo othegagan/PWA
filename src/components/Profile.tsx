@@ -110,20 +110,20 @@ export default function Profile() {
                 </div>
 
                 <div className=''>
-                    <Label>Purchase Date - 27 May 2014, 08:28 AM</Label>
-                    <Input {...register('purchaseDate')} placeholder='Ex: 27 May 2014, 08:28 AM' />
+                    <Label>Purchase Date - 27 May 2024, 08:28 AM</Label>
+                    <Input {...register('purchaseDate')} placeholder='Ex: 27 May 2024, 08:28 AM' />
                     <FormError message={errors.purchaseDate?.message} />
                 </div>
 
                 <div className=''>
-                    <Label>Pass Valid From - 27 May 2014, 12:00 AM</Label>
-                    <Input {...register('passValidFrom')} placeholder='Ex: 27 May 2014, 12:00 AM' />
+                    <Label>Pass Valid From - 27 May 2024, 12:00 AM</Label>
+                    <Input {...register('passValidFrom')} placeholder='Ex: 27 May 2024, 12:00 AM' />
                     <FormError message={errors.passValidFrom?.message} />
                 </div>
 
                 <div className=''>
-                    <Label>Pass Valid till - 27 May 2014, 11:59 PM</Label>
-                    <Input {...register('passValidTill')} placeholder='Ex: 27 May 2014, 11:59 PM' />
+                    <Label>Pass Valid till - 27 May 2024, 11:59 PM</Label>
+                    <Input {...register('passValidTill')} placeholder='Ex: 27 May 2024, 11:59 PM' />
                     <FormError message={errors.passValidTill?.message} />
                 </div>
 
