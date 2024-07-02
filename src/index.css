@@ -2,15 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @layer components {
     .label {
-        @apply text-gray font-normal text-sm tracking-[0.12px]
+        @apply text-sm font-normal tracking-[0.12px] text-gray;
     }
 
     .value {
-        @apply font-medium text-base text-mid-green leading-[14px] tracking-[0.14px];
+        @apply text-base font-medium leading-[14px] tracking-[0.14px] text-mid-green;
     }
 
     body {
@@ -31,7 +29,6 @@
     }
 }
 
-
 @font-face {
     font-family: 'mazz';
     src: url('assets/fonts/MazzardM-Light.ttf');
@@ -39,14 +36,12 @@
     font-style: normal;
 }
 
-
 @font-face {
     font-family: 'mazz';
     src: url('assets/fonts/MazzardM-Regular.ttf');
     font-weight: 400;
     font-style: normal;
 }
-
 
 @font-face {
     font-family: 'mazz';
