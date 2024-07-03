@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
 const manifestForPlugIn: any = {
-    registerType: 'prompt',
+    registerType: 'autoUpdate',
     includeAssests: ['favicon.ico', 'apple-touc-icon.png', 'masked-icon.svg'],
     manifest: {
         name: 'tummoc',
