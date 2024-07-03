@@ -67,10 +67,10 @@ const Pass = () => {
 
                     <div
                         className='mx-4 mb-6 max-w-2xl rounded-b-none rounded-t-[10px] bg-[#ECECEC] pt-[4.5rem]'
-                        style={{
+                       >
+                        <div className='max-w-2xl rounded-[10px] bg-white px-3 py-4'  style={{
                             boxShadow: ' 0px 0px 4px 0px rgba(0, 0, 0, 0.15)',
                         }}>
-                        <div className='max-w-2xl rounded-[10px] bg-white px-3 py-4'>
                             <div className='flex gap-[18px]'>
                                 <div className="h-[70px] w-[70px] rounded-full bg-[url('assets/bmtc-logo.jpg')] bg-cover"></div>
 
@@ -78,12 +78,8 @@ const Pass = () => {
                                     <p className='text-[18px] font-normal text-black'>Ordinary Monthly Pass</p>
 
                                     <div className='flex flex-row gap-2'>
-                                        <div className='rounded-[6px] bg-[#FDE685] px-3 py-1'>
-                                            <p className='text-[14px] font-medium text-[#9A7D00]'>monthly</p>
-                                        </div>
-                                        <div className='rounded-[6px] bg-[hsl(0,0%,93%)] px-3 py-1'>
-                                            <p className='text-[14px] font-medium text-[hsl(0,0%,14%)]'>Ordinary</p>
-                                        </div>
+                                        <p className='rounded-[6px] bg-[#FDE685] px-3 py-1 text-[13px] font-medium text-[#9A7D00]'>Monthly</p>
+                                        <p className='rounded-[6px] bg-[hsl(0,0%,93%)] px-3 py-1 text-[13px] font-medium text-[hsl(0,0%,14%)]'>Ordinary</p>
                                     </div>
                                 </div>
                             </div>
@@ -106,15 +102,15 @@ const Pass = () => {
                             </div>
 
                             <p onClick={() => setShowBookingDetails(true)} className='mt-3 text-center text-[17px] font-medium tracking-tight text-[#4ad9e4]'>
-                                <div className='flex items-center justify-center gap-2'>
+                                <span className='flex items-center justify-center gap-2'>
                                     <AiOutlineInfoCircle /> How to Validate You Pass?
-                                </div>
+                                </span>
                             </p>
                         </div>
                     </div>
 
                     <div
-                        className='mx-auto mb-6 max-w-2xl rounded-[10px] bg-white px-4 py-6 pb-3'
+                        className='mx-4 mb-6 max-w-2xl rounded-[10px] bg-white px-4 py-6 pb-3'
                         style={{
                             boxShadow: ' 0px 1px 2px 0px rgba(0, 0, 0, 0.15)',
                         }}>

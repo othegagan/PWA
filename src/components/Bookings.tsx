@@ -7,7 +7,7 @@ const Bookings = () => {
     const [active, setActive] = useState('active');
     return (
         <>
-            <div className='flex h-[50px] w-full flex-row items-center justify-start px-4 gap-4'>
+            <div className='flex h-[50px] w-full flex-row items-center justify-start gap-4 px-4'>
                 <Link to='/'>
                     <svg width='14' height='14' viewBox='0 0 14 14' className='text-neutral-500' fill='currentColor'>
                         <path d='M14 6.125H3.35125L8.2425 1.23375L7 0L0 7L7 14L8.23375 12.7663L3.35125 7.875H14V6.125Z' />
@@ -43,8 +43,9 @@ const Bookings = () => {
                     <div className='group mx-1 rounded-[7px] bg-gradient-to-r from-[#122A34] to-[#167B83] px-5 py-4 text-white'>
                         <Link to='/pass'>
                             <div className='flex items-center justify-between'>
-                                <div className='rounded-[10px] bg-white px-2 py-1'>
-                                    <p className='text-xs font-normal text-black'>Ordinary</p>
+                                <div className='flex gap-2'>
+                                    <p className='rounded-[10px] bg-[#a7a7a760] px-2 py-1 text-xs font-normal text-white'>Ordinary</p>
+                                    <p className='rounded-[10px] bg-[#a7a7a760] px-2 py-1 text-xs font-normal text-white'>Monthly</p>
                                 </div>
                                 <p className='text-xl font-medium text-white'>₹ 1050.0</p>
                             </div>
@@ -66,7 +67,7 @@ const Bookings = () => {
                         <div className='group mx-1 rounded-[7px] bg-gradient-to-r from-[#696969] to-[#B8B8B8] px-5 py-4 text-white'>
                             <div>
                                 <div className='flex items-center justify-between'>
-                                    <div className='flex gap-4'>
+                                    <div className='flex gap-2'>
                                         <p className='rounded-[10px] bg-[#a7a7a7] px-2 py-1 text-xs font-normal text-white'>Ordinary</p>
                                         <p className='rounded-[10px] bg-[#a7a7a7] px-2 py-1 text-xs font-normal text-white'>Monthly</p>
                                     </div>
@@ -85,7 +86,7 @@ const Bookings = () => {
                         <div className='group mx-1 rounded-[7px] bg-gradient-to-r from-[#696969] to-[#B8B8B8] px-5 py-4 text-white'>
                             <div>
                                 <div className='flex items-center justify-between'>
-                                    <div className='flex gap-4'>
+                                    <div className='flex gap-2'>
                                         <p className='rounded-[10px] bg-[#a7a7a7] px-2 py-1 text-xs font-normal text-white'>Ordinary</p>
                                         <p className='rounded-[10px] bg-[#a7a7a7] px-2 py-1 text-xs font-normal text-white'>Monthly</p>
                                     </div>

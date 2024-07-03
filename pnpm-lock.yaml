@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  react-qrcode-scanner@1.1.7:
+    hash: ohdsa3ptz3zyi37xkm2u6ilbda
+    path: patches/react-qrcode-scanner@1.1.7.patch
+
 importers:
 
   .:
@@ -49,7 +54,7 @@ importers:
         version: 5.0.1(react@18.2.0)
       react-qrcode-scanner:
         specifier: ^1.0.5
-        version: 1.1.7(jsqr@1.4.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 1.1.7(patch_hash=ohdsa3ptz3zyi37xkm2u6ilbda)(jsqr@1.4.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-router-dom:
         specifier: ^6.18.0
         version: 6.18.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -93,6 +98,9 @@ importers:
       postcss:
         specifier: ^8.4.31
         version: 8.4.31
+      postinstall-postinstall:
+        specifier: ^2.1.0
+        version: 2.1.0
       tailwindcss:
         specifier: ^3.3.5
         version: 3.3.5
@@ -2217,6 +2225,9 @@ packages:
   postcss@8.4.31:
     resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
     engines: {node: ^10 || ^12 || >=14}
+
+  postinstall-postinstall@2.1.0:
+    resolution: {integrity: sha512-7hQX6ZlZXIoRiWNrbMQaLzUUfH+sSx39u8EJ9HYuDc1kLo9IXKWjM5RSquZN1ad5GnH8CGFM78fsAAQi3OKEEQ==}
 
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
@@ -5263,6 +5274,8 @@ snapshots:
       picocolors: 1.0.0
       source-map-js: 1.0.2
 
+  postinstall-postinstall@2.1.0: {}
+
   prelude-ls@1.2.1: {}
 
   prettier-plugin-tailwindcss@0.6.5(prettier@3.3.2):
@@ -5320,7 +5333,7 @@ snapshots:
     dependencies:
       react: 18.2.0
 
-  react-qrcode-scanner@1.1.7(jsqr@1.4.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  react-qrcode-scanner@1.1.7(patch_hash=ohdsa3ptz3zyi37xkm2u6ilbda)(jsqr@1.4.0)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       jsqr: 1.4.0
       react: 18.2.0

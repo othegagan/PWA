@@ -25,7 +25,7 @@ const Navbar = () => {
                             />
                         </svg>
 
-                        <span className='text-[13px] font-medium text-[#999999]'>Tummoc Money</span>
+                        <span className='text-[13px] font-medium whitespace-nowrap text-[#999999]'>Tummoc Money</span>
                     </Link>
 
                     <Link to='/bookings' className='group inline-flex flex-col items-center justify-center px-5 text-[#BEBEBE]'>

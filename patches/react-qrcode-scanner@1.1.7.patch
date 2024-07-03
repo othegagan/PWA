@@ -1,0 +1,52 @@
+diff --git a/dist/index.esm.js b/dist/index.esm.js
+index 65f4684585dcb5a8fb7e2e1888d4c8d2df473fc6..f3e0cd889eb6583f3d4b262a3471afbc22047b27 100644
+--- a/dist/index.esm.js
++++ b/dist/index.esm.js
+@@ -226,7 +226,7 @@ const QrScanner = ({
+     paddingBottom: `${ratio}%`,
+     display: 'block',
+     overflow: 'hidden',
+-    position: 'relative',
++    position: 'static',
+     objectFit: 'cover'
+   };
+   return /*#__PURE__*/React.createElement("div", {
+diff --git a/dist/index.js b/dist/index.js
+index 4ad0e4342a12fb91110e7f4f8fa0f5a20f1da3ce..a41ef7a66119bd1b16f2d4cbe9c358bd679f75bf 100644
+--- a/dist/index.js
++++ b/dist/index.js
+@@ -228,7 +228,7 @@ const QrScanner = ({
+     paddingBottom: `${ratio}%`,
+     display: 'block',
+     overflow: 'hidden',
+-    position: 'relative',
++    position: 'static',
+     objectFit: 'cover'
+   };
+   return /*#__PURE__*/React.createElement("div", {
+diff --git a/dist/index.umd.js b/dist/index.umd.js
+index 5e6c14909d37803130b9633d6188966581a9aedb..6bc43696bddd7141ed2a2f923178d78613dfe171 100644
+--- a/dist/index.umd.js
++++ b/dist/index.umd.js
+@@ -229,7 +229,7 @@
+       paddingBottom: `${ratio}%`,
+       display: 'block',
+       overflow: 'hidden',
+-      position: 'relative',
++      position: 'static',
+       objectFit: 'cover'
+     };
+     return /*#__PURE__*/React.createElement("div", {
+diff --git a/src/index.jsx b/src/index.jsx
+index cff4b3d22d4433786a1d16893052f801ef577c6a..1c6885081b6c047dbe4a7fa5766c972a5edc8604 100644
+--- a/src/index.jsx
++++ b/src/index.jsx
+@@ -212,7 +212,7 @@ export const QrScanner = ({
+     paddingBottom: `${ratio}%`,
+     display: 'block',
+     overflow: 'hidden',
+-    position: 'relative',
++    position: 'static',
+     objectFit: 'cover',
+   };
+ 
