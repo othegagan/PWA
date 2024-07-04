@@ -3,12 +3,13 @@ import { DateTime } from 'luxon';
 import { twMerge } from 'tailwind-merge';
 
 export const extractBusNumber = (inputString: string) => {
-    const regex = /tummoc_qr=([A-Z0-9\s-]+)Banglore/i;
+    console.log("inputString", inputString)
+    const regex = /tummoc_qr=([A-Z0-9\s-]+)&/i;
     const match = regex.exec(inputString);
 
+    console.log("match", match)
     if (match && match[1]) {
-        const busNumber = match[1].replace('Banglore', '').replace('-', '').trim();
-        return busNumber;
+        return match[1].replace('Bangalore', '').trim();
     } else {
         return null; // Return null if the pattern is not found
     }
