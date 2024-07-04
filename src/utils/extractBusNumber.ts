@@ -1,15 +1,14 @@
-//@ts-ignore
-import clsx from 'clsx';
-import { ClassValue } from 'clsx';
+import clsx , { ClassValue } from 'clsx';
 import { DateTime } from 'luxon';
 import { twMerge } from 'tailwind-merge';
 
-export const extractBusNumber = (inputString: any) => {
-    const regex = /tummoc_qr=([A-Z0-9\s]+)&/i;
-    const match = inputString.match(regex);
+export const extractBusNumber = (inputString: string) => {
+    const regex = /tummoc_qr=([A-Z0-9\s-]+)Banglore/i;
+    const match = regex.exec(inputString);
 
     if (match && match[1]) {
-        return match[1].replace('Bangalore', '');
+        const busNumber = match[1].replace('Banglore', '').replace('-', '').trim();
+        return busNumber;
     } else {
         return null; // Return null if the pattern is not found
     }
